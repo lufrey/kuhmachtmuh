@@ -73,5 +73,7 @@ module.exports = {
     sourceType: "module",
     project: "./tsconfig.json",
   },
-  rules: {},
+  rules: {
+    "import/no-unresolved": "off",
+  },
 };
