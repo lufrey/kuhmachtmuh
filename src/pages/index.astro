@@ -60,8 +60,7 @@ const picture = await getPicture({
         e.preventDefault();
         const answerEl = document.getElementById("answer");
         if (answerEl) {
-          // get random number between 1 and 5
-          const random = Math.floor(Math.random() * options.length) + 1;
+          const random = Math.floor(Math.random() * options.length);
           answerEl.innerText = options[random] as string;
           answerEl.parentElement?.classList.remove("opacity-0");
           if (timeout) clearTimeout(timeout);
