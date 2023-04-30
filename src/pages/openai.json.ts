@@ -18,7 +18,7 @@ export const post: APIRoute = async ({ request }) => {
     messages: [
       {
         role: "user",
-        content: `Antworte die Frage als wärst du eine Kuh. Bitte antworte fröhlich, etwas lustig und sehr knapp und nutze das Wort "muh".
+        content: `Beantworte die folgende Frage als wärst du eine Kuh. Bitte antworte fröhlich, sehr kurz, mache Witze und nutze sehr häufig das Wort "muh".
         
         ${question}`,
       },
