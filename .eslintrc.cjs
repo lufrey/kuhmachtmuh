@@ -8,7 +8,7 @@ module.exports = {
   extends: [
     // 'plugin:react/recommended',
     "standard-with-typescript",
-    "plugin:@typescript-eslint/recommended",
+    // "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:astro/recommended",
@@ -40,7 +40,6 @@ module.exports = {
         // Enable recommended rules
         "astro/no-conflict-set-directives": "error",
         "astro/no-unused-define-vars-in-style": "error",
-
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
       },
@@ -75,5 +74,7 @@ module.exports = {
   },
   rules: {
     "import/no-unresolved": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
   },
 };

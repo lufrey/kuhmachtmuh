@@ -7,6 +7,10 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    "**/*.astro",
+    "**/*.astro"
   ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
 }

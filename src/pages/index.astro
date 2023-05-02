@@ -16,12 +16,12 @@ const picture = await getPicture({
 
 <Layout title="kuh macht muh">
   <main
-    class="flex items-center justify-center w-screen h-screen p-4 text-gray-300 bg-green-700"
+    class="flex items-center justify-center w-screen h-screen p-4 text-gray-300"
   >
     <div
       class="flex flex-col items-center w-full max-w-lg text-center h-4/5 md:h-4/5"
     >
-      <div class="text-3xl">kuh macht muh</div>
+      <div class="text-3xl drop-shadow-lg">kuh macht muh</div>
       <div class="grow flex flex-col">
         <div
           class="p-4 mt-auto text-gray-800 opacity-0 transition-opacity duration-200 bg-gray-300 border-2 relative border-gray-800 rounded-3xl"
@@ -71,6 +71,9 @@ const picture = await getPicture({
   </main>
 
   <script>
+    import { searchStore } from "../components/Backdrop";
+    console.log(searchStore);
+    // searchStore.set({ isSearching: true });
     const form = document.getElementById("form");
     const button = document.getElementById("submit-button");
     let timeout: number | undefined;
@@ -109,6 +112,7 @@ const picture = await getPicture({
     // loading function to change the button text
     // with dot animation
     const loading = (loading: boolean) => {
+      searchStore.set({ isSearching: loading });
       if (!button) return undefined;
       if (loading) {
         button.innerText = "fragen";
