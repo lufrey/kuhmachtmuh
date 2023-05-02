@@ -15,9 +15,9 @@ const Effects = forwardRef((props, ref) => {
       <DepthOfField
         ref={ref}
         bokehScale={10}
-        focalLength={0.02}
-        resolutionX={width * 2}
-        resolutionY={height * 2}
+        focalLength={0.4}
+        // resolutionX={width * 2}
+        // resolutionY={height * 2}
       />
       <Vignette />
       {/* <Bloom blendFunction={2} /> */}
