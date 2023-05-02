@@ -18,10 +18,10 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <div class="absolute h-full w-full z-0 bg-[#111]">
+    <div class="fixed h-full w-full -z-10 bg-[#111]">
       <Backdrop client:only />
     </div>
-    <div class="absolute z-">
+    <div class="">
       <slot />
     </div>
   </body>
