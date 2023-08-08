@@ -1,17 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Cow from "../images/cow.png";
-import { getPicture } from "@astrojs/image";
-
-const picture = await getPicture({
-  src: Cow,
-  widths: [300, 600],
-  fit: "contain",
-  background: "#00000000",
-  formats: ["webp", "avif", "png"],
-  position: "center",
-  alt: "kuh",
-});
+import Cow from "../images/cow.webp";
 ---
 
 <Layout title="kuh macht muh">
@@ -39,14 +28,7 @@ const picture = await getPicture({
         <div class="p-4"></div>
       </div>
       <div class="relative w-1/2 shrink">
-        <picture class="block w-full">
-          <source
-            srcset={picture?.sources?.[0]?.srcset}
-            type={picture?.sources?.[0]?.type}
-            sizes={"(max-width: 600px) 300px, 100vw"}
-          />
-          <img {...picture.image} alt={"kuh"} class="w-full" />
-        </picture>
+        <img alt="kuh" src={Cow} class="w-full aspect-[700/861]"/>
       </div>
       <div class="p-4"></div>
       <div>
