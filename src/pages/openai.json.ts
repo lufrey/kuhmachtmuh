@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 
 import { Configuration, OpenAIApi } from "openai";
+
 const configuration = new Configuration({
   organization: import.meta.env.OPENAI_ORGANIZATION,
   apiKey: import.meta.env.OPENAI_API_KEY,
