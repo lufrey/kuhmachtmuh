@@ -61,8 +61,17 @@ import Cow from "../images/cow.webp";
     let timeout: number | undefined;
 
     const getAnswer = async (q: string) => {
-      if (q.includes("einkaufslisten"))
-        return "- chili con carne\n- klopapier\n- milch";
+      if (q.includes("einkaufsliste"))
+        return `- sojageschnetzeltes (500g)\n
+                - glutenfreie sojasauce\n
+                - tomaten(3 Flaschen mindestens)\n
+                - glutenfreie sojasauce\n
+                - reis\n
+                - baguette\n
+                - tortilla chips\n
+                - bohnen (3 Dosen)\n
+                - mais (2-3 Dosen)\n
+      `;
 
       const url = new URL("/openai.json", window.location.href);
       const data = new URLSearchParams();
