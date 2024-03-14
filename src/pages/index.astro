@@ -28,7 +28,7 @@ import Cow from "../images/cow.webp";
         <div class="p-4"></div>
       </div>
       <div class="relative w-1/2 shrink">
-        <img alt="kuh" src={Cow} class="w-full aspect-[700/861]"/>
+        <img alt="kuh" src={Cow} class="w-full aspect-[700/861]" />
       </div>
       <div class="p-4"></div>
       <div>
@@ -61,6 +61,9 @@ import Cow from "../images/cow.webp";
     let timeout: number | undefined;
 
     const getAnswer = async (q: string) => {
+      if (q.includes("einkaufslisten"))
+        return "- chili con carne\n- klopapier\n- milch";
+
       const url = new URL("/openai.json", window.location.href);
       const data = new URLSearchParams();
       data.append("q", q);
