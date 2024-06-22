@@ -1,6 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import Cow from "../images/cow.webp";
+import Cow from "../assets/cow.webp";
 ---
 
 <Layout title="kuh macht muh">
@@ -28,7 +29,7 @@ import Cow from "../images/cow.webp";
         <div class="p-4"></div>
       </div>
       <div class="relative w-1/2 shrink">
-        <img alt="kuh" src={Cow} class="w-full aspect-[700/861]" />
+        <Image src={Cow} alt="kuh" class="w-full aspect-[700/861]" />
       </div>
       <div class="p-4"></div>
       <div>
@@ -58,7 +59,7 @@ import Cow from "../images/cow.webp";
     // searchStore.set({ isSearching: true });
     const form = document.getElementById("form");
     const button = document.getElementById("submit-button");
-    let timeout: number | undefined;
+    let timeout: NodeJS.Timeout | undefined;
 
     const getAnswer = async (q: string) => {
       if (q.includes("einkaufsliste"))

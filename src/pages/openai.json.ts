@@ -9,7 +9,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-export const post: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request }) => {
   const formData = await request.formData();
   // only use first 100 characters of question
   const question = (formData.get("q") as string).slice(0, 100);
